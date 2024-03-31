@@ -1,0 +1,217 @@
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: auto;
+  font-family: 'poppins', sans-serif;
+}
+
+td {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+td a {
+  color: #000;
+}
+
+/* Style the first row to remove top border */
+tr:first-child td {}
+
+/* Style the last row to remove bottom border */
+tr:last-child td {}
+
+.lainnya {
+  font-family: sans-serif;
+  margin-left: 3%;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, hsla(203, 58%, 50%, 1) 12%, hsla(185, 69%, 52%, 1) 88%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 7%;
+  margin-right: 100%;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 1px;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Add horizontal lines */
+tr:not(:last-child) {
+  border-bottom: 1px solid #1f8bd4;
+}
+
+tr:first-child {
+  border-top: 1px solid #1f8bd4;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  body {
+    
+  }
+
+  table {
+     margin-top: 56px;
+      
+  }
+
+  .navbar {
+      margin-right: 0;
+  }
+}
+   /* Mengatur lebar total layout */
+   .container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Mengatur gambar di pojok atas */
+.gambar {
+    position: absolute;
+    top: -17%;
+    right: -39px;
+    width: 27%; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    margin: 10px; /* Sesuaikan margin sesuai kebutuhan */
+}
+
+/* Mengatur teks */
+.teks h2{
+    width: 1%; /* Sesuaikan lebar teks sesuai kebutuhan */
+    margin-left: -12%; /* Sesuaikan margin sesuai kebutuhan */
+    font-family: 'Poppins', sans-serif;
+}
+.containerbaru {
+  position: fixed;
+  bottom: 14px;
+  right: -9px;
+  margin: 10px;
+}
+
+img {
+  width: 277px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  height: auto;
+}
+/* .profilbaru img{
+  width: 346px;
+  height: 216px;
+} */
+.profilbaru img{
+  
+  margin: auto;
+  height: auto;
+  display: block; /* Membuat gambar menjadi elemen blok untuk menghindari celah di bawahnya */
+  margin: auto; /* Menengahkan gambar */
+  margin-top: 10%;
+}
+
+
+.icon-container{
+  width: 28px; /* Atur lebar ikon sesuai kebutuhan */
+  height: auto;
+}
+
+.containerv3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-containerv1 {
+  flex-grow: 1;
+  padding-right: 20px;
+  
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+/* Styling tambahan sesuai kebutuhan */
+.text-containerv1 p {
+  font-size: 18px;
+  font-family: '1';
+  position: absolute;
+  top: 57%;
+
+}
+
+
+
+.icon-container{
+  width: 28px; /* Atur lebar ikon sesuai kebutuhan */
+  height: auto;
+}
+
+.containerv2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-containerv4 {
+  flex-grow: 1;
+  padding-right: 20px;
+  
+}
+
+.icon-container {
+  flex-shrink: 0;
+}
+
+/* Styling tambahan sesuai kebutuhan */
+.text-containerv4 p {
+  font-size: 18px;
+  font-family: '1';
+  position: absolute;
+  top: 51%;
+
+}
+@font-face {
+  font-family:'1' ;
+  src: url(./font/Poppins-SemiBold.ttf);
+}
+.icon-container i {
+  font-size: 32px; /* Atur ukuran ikon sesuai kebutuhan */
+  color: #000000; /* Atur warna ikon sesuai kebutuhan */
+  position: absolute;
+  left: 86%;
+  top: 61%;
+}
+.icon-containerv5 i {
+  font-size: 33px; /* Atur ukuran ikon sesuai kebutuhan */
+  color: #000000; /* Atur warna ikon sesuai kebutuhan */
+  position: absolute;
+  left: 81.5%;
+  top: 56%;
+  
+}

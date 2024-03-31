@@ -1,0 +1,116 @@
+/* .media-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+   
+  
+  }
+  
+  .media-item {
+    flex: 0 0 auto;
+    width: 200px; 
+    max-width: 300px;
+    margin-right: 10px; 
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+    margin: 25%;
+    margin-top: -10%;
+
+  }
+  
+  .media-item img {
+    width: 173%;
+    height: 526px;
+   
+  
+    
+  }
+  
+  .caption {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+  }
+
+.donwload img{
+    width: 345px;
+    height: 50px;
+    margin-top: -100%;
+  
+  } */
+  /* Common styles for both desktop and mobile */
+.media-scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+}
+
+.media-item {
+    flex: 0 0 auto;
+    width: 200px; 
+    max-width: 300px;
+    margin-right: 10px; 
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+    margin: 25%;
+    margin-top: -10%;
+}
+
+.media-item img {
+    width: 100%; /* Make the image responsive to its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.caption {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+/* Responsive styles for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+    .media-item {
+        width: 100%; /* Take up the full width of the container */
+        max-width: none; /* Remove maximum width */
+        margin-right: 0; /* No margin on the right */
+    }
+
+    .media-item img {
+      width: 102%;
+      margin-top: 14px;
+      height: 106%;
+      margin-left: -2px;
+      object-fit: contain;
+  } 
+    }
+    
+    .donwload img {
+        width: 91%; /* Make the download image responsive */
+        height: auto; /* Maintain aspect ratio */
+        bottom: -4%;
+        position: absolute;
+        left: 5.2%;
+        
+    }
+
+.logo{
+    margin: 1% 0 0 2%;
+  }
+  .logo a{
+    font-size: 10px;
+    color:rgb(0, 0, 0);
+
+    text-decoration: none;
+
+  }
+  .logo h2{
+  color: rgb(0, 0, 0);
+  font-size: 15pt;
+  font-family:sans-serif;
+  margin-top: 1%;
+  }
+  

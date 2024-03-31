@@ -1,0 +1,865 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(90deg, hsla(203, 58%, 50%, 1) 12%, hsla(185, 69%, 52%, 1) 88%);
+ 
+}
+
+.text {
+  font-size: 9px;
+  font-family:'Poppins',sans-serif ;
+}
+.text h2{
+  font-size: 10px;
+
+}
+
+.image {
+  max-width: 10%;
+  height: auto;
+  
+}
+
+.font-atas{
+  position: absolute;
+  font-family: 'Poppins';
+  top: 4%;
+  left:4%;
+  
+  color: white;
+  font-size: 5px;
+
+}
+.font-atas p{
+ top: 15px;
+ font-size: 5pt;
+ font-family: 'Poppins', sans-serif;
+ margin: 10px;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, hsla(203, 58%, 50%, 1) 12%, hsla(185, 69%, 52%, 1) 88%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height:7%;
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+}
+
+ /* ---------batas-------- */
+
+
+
+.slider-container {
+  position: relative;
+  max-width: 120%;
+  margin: 1%;
+  overflow: hidden;
+  display: flex;
+  margin-top: 5%;
+  justify-content: center; /* Menyusun slider ke tengah */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center; /* Menyusun gambar ke tengah */
+}
+
+.slide img {
+  max-width: 100%; /* Menjaga responsivitas gambar */
+  height: auto;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev-button,
+.next-button {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.indicator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #333;
+}
+
+
+  /* Style untuk setiap gambar */
+  .image-container img {
+      width: 50%; /* Setengah dari lebar kontainer untuk masing-masing gambar */
+      
+  }
+
+  .slider2-wrapper {
+    position: relative;
+  }
+  
+  .slider2-wrapper .slide-button {
+    position: relative;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }  
+  .slider2-wrapper .slide-button:hover {
+    background: #404040;
+  }
+  
+  .slider2-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+  }
+  
+  .slider2-wrapper .slide-button#next-slide {
+    right: -25px;
+  }
+  
+  .slider2-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  
+  .slider2-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .slider2-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb {
+    position: relative;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: relative;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+
+  /* Styles for mobile and tablets */
+  @media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+  
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+  
+    .slider-wrapper .image-list .image-item {
+      width: 200px;
+      height: 200px;
+    }  
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+    .slider2-wrapper .slide-button {
+      display: none !important;
+    }
+  
+    .slider2-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+  /* bagian ukurang/jarak artikel 2 */
+    .slider2-wrapper .image-list .image-item {
+      width: 96px;
+      height: 100px;
+      margin-top: 0%;
+      margin: 6%;
+      border-radius: 15px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+}
+  
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+  }
+  .font{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    margin: 5px;
+  }
+  .font a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    
+}
+.font h2 {
+  font-size: 14px;
+  top: 7%;
+  font-family: 'poppins',sans-serif;
+}
+.font h3{
+  font-size: 14px;
+  font-family: 'poppins',sans-serif;
+}
+
+.top-bar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.text {
+  font-size: 1.2em;
+}
+
+.imagek {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media query untuk perangkat dengan lebar maksimum 600px (contoh: perangkat seluler) */
+@media only screen and (max-width: 600px) {
+  .tekokuis {
+    flex-direction: column;
+    text-align: center;
+  
+
+  
+    margin-left: 1%;
+    margin-right: 1%; 
+  }
+  .tekokuis img{
+    width: 353px;
+   
+  }
+  
+ 
+  }
+
+
+
+  .image-container {
+    display: flex;
+    justify-content: space-between; /* Mengatur ruang antar gambar */
+    max-width: 1200px; /* Optional: Set a maximum width for the container */
+    margin: 0 auto; /* Optional: Center the container on the page */
+    flex-wrap: wrap; /* Pindah ke baris baru jika tidak cukup ruang */
+}
+
+.image-item {
+    flex: 1 0 calc(25% - 10px); /* Empat gambar per baris dengan sedikit margin */
+    margin: 5px;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .image-item {
+        flex: 1 0 calc(50% - 10px); /* Dua gambar per baris pada layar lebih kecil */
+    }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+td {
+  border-top: 5px solid rgb(74, 187, 224);
+  padding: 8px;
+ display: flex;
+ justify-content: space-between;
+}
+td a{
+color: #000;
+}
+
+/* Style the first row to remove top border */
+tr:first-child td {
+  border-top: 5px solid rgb(74,187, 224);
+  
+}
+
+/* Style the last row to remove bottom border */
+tr:last-child td {
+border-bottom: 5px solid rgb(74,187, 224);
+}
+  .profil-teko{
+    width: 420px;
+    height: 250px;
+    margin-top: 50px;
+    
+    
+
+  }
+  .logo-tentang{
+    justify-content: space-between;
+    
+  }
+
+  .logo{
+    margin: 1% 0 0 2%;
+  }
+  .logo a{
+    font-size: 10px;
+    color:rgb(0, 0, 0);
+
+    text-decoration: none;
+
+  }
+  .logo h2{
+  color: rgb(0, 0, 0);
+  font-size: 15pt;
+  font-family:sans-serif;
+  margin-top: 3%;
+  }
+  
+  .logo-tentang{
+    display: flex;
+    box-shadow: 0px 5px 5px rgb(141, 200, 219);
+    align-items: center;
+  } 
+
+  .judul{
+    font-family: sans-serif;
+    font-size: 7.3pt;
+    margin: 1%;
+    margin-top: 5%;
+  }
+  /* .logo h2{
+  color: rgb(74, 187, 224);
+  font-size: 100%;
+  margin-right: 2%;
+  } */
+  .logo-tentang{
+    display: flex;
+   
+    align-items: center;
+  }
+  .logo-tentang a{
+    font-size: 20px;
+    color:rgb(93, 195, 230);
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
+  .teko-icon img{
+    width: 400px;
+    height: 350px;
+  }
+  .versi{
+    margin-top: 50px;
+  }
+  .teko{
+   margin-right: 50px;
+  }
+
+
+  .bg-image {
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% dari tinggi viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0a0a0a; /* Optional: Mengatur warna teks */
+    font-family: Arial, sans-serif; /* Optional: Mengatur jenis font */
+}
+
+
+  /* ----------------------video------------------------*/
+  #video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 15px;
+  }
+
+  video {
+    width: 100%;
+    display: block;
+  }
+
+  #video-info {
+    margin-top: -5%;
+    margin-left: 5%;
+    font-size:55%;
+    font-family:'1';
+  }
+  @font-face {
+    font-family:'1' ;
+    src: url(./font/Poppins-SemiBold.ttf);
+  }
+ .atasdikit{
+    margin-top: -1%;
+    
+  }
+
+  #description {
+    color: #535151;
+    
+  }
+
+
+
+.thumbnail-container {
+    position: relative;
+    overflow: hidden;
+
+}
+.thumbnail-logo {
+  width: 30px; /* Adjust the width of the logo as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+.thumbnail-container img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 5%;
+    
+   margin-top: 2%; 
+}
+.tengah{
+  margin-left: 5%;
+  margin-top: 5%;
+  font-family: 'poppins',sans-serif;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw; /* Menggunakan unit vw untuk ukuran yang responsif */
+    height: 10vw;
+    max-width: 50px; /* Maksimum lebar tombol putar */
+    max-height: 50px; /* Maksimum tinggi tombol putar */
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 2vw 0 2vw 3.5vw; /* Menggunakan unit vw untuk ukuran yang responsif */
+        border-color: transparent transparent transparent #000;
+    }
+}
+
+/* Menambahkan aturan media query untuk menyesuaikan ukuran tombol putar pada layar kecil */
+@media (max-width: 600px) {
+    .play-button {
+        width: 15vw;
+        height: 15vw;
+        max-width: 40px;
+        max-height: 40px;
+        &:after {
+            border-width: 3vw 0 3vw 5vw;
+        }
+    }
+    
+}
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width) */
+  height: 0;
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-info {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.video-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.video-description {
+  color: #666;
+}
+.article p {
+  font-family: sans-serif;
+}
+.header img {
+  width: 98%;
+  margin: 1%;
+  height: auto;
+  margin-top:-1%;
+}
+.center-bar{
+  background-color: #333;
+  color: #764b4b;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:gray;
+}
+
+.scroll-up-text  {
+  background-color: #f5f5f5;
+  color: #0a0a0a;
+  
+  font-size: 13px;
+  margin: 6%;
+  line-height: 1.5; /* Atur tinggi baris */
+  text-align: justify; 
+  font-family:'poppins'sans-serif;
+
+}
+
+
+
+
+
+.quiz-container {
+  background: linear-gradient(90deg, hsla(203, 58%, 50%, 1) 12%, hsla(185, 69%, 52%, 1) 88%);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(212, 210, 210, 0.1);
+  text-align: center;
+  width: 297%;
+  height: 175%;
+  font-size: 11px;
+  
+  position: relative;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.option {
+  text-align: left;
+  margin: -7px;
+  border-style: none;
+  padding: 1px 23px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  list-style: none;
+  font-family: 'poppins',sans-serif;
+  margin-left: -5%;
+}
+
+.button-style {
+  background: linear-gradient(90deg, rgb(239, 249, 255) 41%, hslargb(220, 252, 255));
+  /* Warna latar belakang tombol */
+  border: none; /* Hilangkan border */
+  color: rgb(0, 0, 0); /* Warna teks */
+  padding: 10px 20px; /* Padding tombol */
+  text-align: center; /* Posisi teks di tengah */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Responsive styles for screens smaller than 768px (typical mobile devices) */
+@media screen and (max-width: 900px) {
+  .quiz-container {
+    width: 86%; /* Make the container full width */
+    height: auto; /* Allow the height to adjust based on content */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin: auto;
+  }
+
+  .options {
+    margin-top: 10px; /* Adjust margin for options */
+  }
+
+  .option {
+    padding: 5px 15px; /* Adjust padding for options */
+    font-size: 85%; /* Adjust font size for options */
+  }
+
+  .button-style {
+    padding: 8px 15px; /* Adjust padding for the button */
+  }
+}
+ .tekokuiss{
+  margin-left: 2%;
+  font-family: 'poppins',sans-serif;
+  font-size: 52%;
+}
+.font-newsteko h2{
+  font-family: 'poppins',sans-serif;
+  font-size: 81%;
+  margin-left: 2%;
+}
+
+
+
+.main-content {
+  padding: 20px;
+}
+
+
+#popup-content {
+  background: linear-gradient(90deg, hsla(203, 58%, 50%, 1) 12%, hsla(185, 69%, 52%, 1) 88%); /* Warna latar belakang pop-up */
+  padding: 20px;
+  text-align: left; /* Rata kiri */
+  position: relative;
+  border-radius: 8px; /* Corner border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan (optional) */
+  max-width: 80%; /* Lebar maksimum pop-up */
+  margin: 20px auto; /* Pusatkan pop-up secara horizontal */
+}
+
+
+
+
+
+#popup-content p{
+  font-size: 93%;
+  color: white;
+  font-family: '2';
+}
+@font-face {
+  font-family:'2' ;
+  src: url(./font/Poppins-SemiBold.ttf);
+}
+
+#close-btn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 39px;
+  cursor: pointer;
+}
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  #popup-content {
+      max-width: 95%; /* Lebar maksimum pop-up pada layar kecil */
+  }
+}
+.majalah h3{
+  font-family:'poppins',sans-serif ;
+  font-size: 14px;
+}
+
+#container {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+#video {
+  flex: 1;
+  
+}
+
+#text {
+  flex: 1;
+  box-sizing: border-box;
+  font-size: 43%;
+  font-family: '3';
+  margin-left: 1%;
+  margin-top: 2%;
+  text-align: left;
+}
+#text p{
+  font-size: 210%;
+  margin-top: -3%;
+  color: rgb(107, 107, 107);
+  font-family: '3';
+  
+}
+#text h2{
+  font-family: '3';
+  font-size: 155%;
+}
+@font-face {
+  font-family:'3' ;
+  src: url(./font/Poppins-Regular.ttf);
+}
+video {
+  width: 100%;
+  
+  margin-top: 4%;
+}
+#title {
+  text-align: left;
+  font-family: '2';
+  margin-left: 3%;
+  font-size: 65%;
+  margin-top: 1%;
+}
